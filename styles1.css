@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    /* position: fixed;
+    width:100%; */
+}
+
+header h1{
+    margin: 0;
+    font-size: 30px;
+}
+
+#workshops,#seminars,#social{
+    background-color: #cccaca;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+section {
+    flex-basis: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    flex-wrap: wrap;
+}
+
+.event-list li:nth-child(odd){
+    background-color: #0396FF;
+}
+
+.event-list li:nth-child(even){
+    background-color:#b3b30bc0    ;
+}
+
+.event-list li {
+    flex-basis: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* background-color: #f2f2f2; */
+    border-radius: 5px;
+}
+
+.event-list h3 {
+    margin: 0;
+}
+
+.register-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.header-links li{
+    justify-content: space-between;
+}
+
+#home{
+    text-align: center;
+    font-size: 26px;
+}
+
+.register-link {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.register-link:hover {
+    background-color: #45a049;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.large-header {
+    background-image: url('images/edit1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.large-header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.large-header p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* #event-list:target .event-list li:last-child {
+    
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+  } */
+
+.event-form label{
+    padding:10px;
+}
+
+#workshops .event-list-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+}
+
+#workshops .event-list {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+#workshops .event-list li {
+    display: inline-block;
+    /* Additional styles for event list item */
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+
+#searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#stickyNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+}

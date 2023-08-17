@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Event Platform</title>
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .add-edit-buttons {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        .add-edit-buttons button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+            header {
+                text-align: center;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .add-edit-buttons {
+                text-align: center;
+            }
+
+            .event-list li {
+                margin-bottom: 20px;
+            }
+
+            body {
+                background-color: #f2f2f2;
+            }
+
+            header {
+                background-color: #333;
+                color: white;
+            }
+
+            .register-link, .add-edit-buttons button {
+                background-color: #b3b30bc0;
+            }
+            .event-list li:nth-child(even){
+                background-color: #0396FF;
+            }
+
+            .event-list li:nth-child(odd){
+                background-color:rgb(200, 200, 13);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <h1>Campus Event Platform</h1>
+        <p>Discover and register for exciting campus events.</p>
+        <hr> -->
+        <nav id="stickyNav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workshops">Workshops</a></li>
+                <li><a href="#seminars">Seminars</a></li>
+                <li><a href="#social">Social Gatherings</a></li>
+            </ul>
+        </nav>
+        
+        <hr>
+    </header>
+    
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+
+    <div class="large-header">
+        <h1>Welcome to the Campus Event Platform!</h1>
+        <p>Discover and register for exciting campus events.</p>
+    </div>
+
+    <!-- <section id="home">
+        <h2>Welcome to the Campus Event Platform!</h2>
+        <p>Discover and register for exciting campus events.</p>
+    </section> -->
+
+    <section id="workshops">
+        <h2>
+            Workshops
+            <div class="add-edit-buttons">
+                <button id="addButton">Add</button>
+                <button id="editButton">Edit</button>
+            </div>
+            <hr>
+        </h2>
+        <ul class="event-list">
+            <li data-event-date="2023-09-12 00:00:00">
+                <h3>Web 3.0 - Blockchain Workshop</h3>
+                <p>Date: September 12, 2023</p>
+                <p>Location: NLH</p>
+                <div class="countdown-timer"></div>
+                <a class="register-link" href="register.html">Register</a>
+            </li>
+            <li data-event-date="2024-02-16 00:00:00">
+                <h3>Blender 3D Workshop</h3>
+                <p>Date: February 16-17, 2024</p>
+                <p>Location: NLH</p>
+                <div class="countdown-timer"></div>
+                <a class="register-link" href="register.html">Register</a>
+            </li>
+            <li data-event-date="2024-02-15 00:00:00">
+                <h3>Microcontrollers in Drones Workshop</h3>
+                <p>Date: February 15-17, 2024</p>
+                <p>Location: NLH</p>
+                <div class="countdown-timer"></div>
+                <a class="register-link" href="register.html">Register</a>
+            </li>
+            <li data-event-date="2024-02-14 00:00:00">
+                <h3>Advanced 3D Printing Workshop</h3>
+                <p>Date: February 14-15, 2024</p>
+                <p>Location: NLH</p>
+                <div class="countdown-timer"></div>
+                <a class="register-link" href="register.html">Register</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="seminars">
+        <h2>
+            Seminars
+            <div class="add-edit-buttons">
+                <button id="addButton">Add</button>
+                <button id="editButton">Edit</button>
+            </div>
+            <hr>
+        </h2>
+        <ul class="event-list">
+            <li data-event-date="2024-02-18 00:00:00">
+                <h3>Entrepreneurship Journey</h3>
+                <p>Date: February 18, 2024</p>
+                <p>Location: Library Auditorium</p>
+                <div class="countdown-timer"></div>
+                <button class="register-btn">Register</button>
+            </li>
+            <li data-event-date="2024-02-12 00:00:00">
+                <h3>CSS Frameworks</h3>
+                <p>Date: February 12, 2024</p>
+                <p>Location: NLH</p>
+                <div class="countdown-timer"></div>
+                <button class="register-btn">Register</button>
+            </li>
+        </ul>
+    </section>
+
+    <section id="social">
+        <h2>
+            Social Gatherings
+            <div class="add-edit-buttons">
+                <button id="addButton">Add</button>
+                <button id="editButton">Edit</button>
+            </div>
+            <hr>
+        </h2>
+        <ul class="event-list">
+            <li data-event-date="2024-02-12 00:00:00">
+                <h3>Digital Divide</h3>
+                <p>Date: February 12, 2024</p>
+                <p>Location: Student Center</p>
+                <div class="countdown-timer"></div>
+                <button class="register-btn">Register</button>
+            </li>
+            <li data-event-date="2024-11-15 00:00:00">
+                <h3>Social Gathering 2</h3>
+                <p>Date: November 15, 2024</p>
+                <p>Location: Outdoor Space</p>
+                <div class="countdown-timer"></div>
+                <button class="register-btn">Register</button>
+            </li>
+            <li data-event-date="2024-02-12 00:00:00">
+                <h3>Digital Divide 2</h3>
+                <p>Date: February 12, 2024</p>
+                <p>Location: Student Center</p>
+                <div class="countdown-timer"></div>
+                <button class="register-btn">Register</button>
+            </li>
+        </ul>
+    </section>
+
+    <div id="darkModeToggle">
+        <label for="darkModeCheckbox">Dark Mode</label>
+        <input type="checkbox" id="darkModeCheckbox">
+    </div>
+
+    <!-- Modal Window -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Event Details</h2>
+            <form class="event-form">
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required>
+
+                <label for="eventDate">Event Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+
+                <label for="eventTime">Event Time:</label>
+                <input type="time" id="eventTime" name="eventTime" required>
+
+                <label for="eventReminder">Event Reminder:</label>
+                <select id="eventReminder" name="eventReminder">
+                    <option value="none">None</option>
+                    <option value="15">15 minutes</option>
+                    <option value="30">30 minutes</option>
+                    <option value="60">1 hour</option>
+                    <option value="120">2 hours</option>
+                </select>
+
+                <label for="eventType">Event Type:</label>
+                <select id="eventType" name="eventType">
+                    <option value="default">Default</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="seminar">Seminar</option>
+                    <option value="social">Social Gathering</option>
+                </select>
+
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <p>&copy; Nikhilesh S.</p>
+    </footer>
+
+    <script src="final.js"></script>
+</body>
+</html>
